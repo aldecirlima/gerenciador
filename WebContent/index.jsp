@@ -7,17 +7,18 @@
 	<c:if test="${not empty usuarioLogado }">
 		Logado como ${usuarioLogado.email }
 	</c:if>
-	<form action="novaEmpresa" method="post">
+	<form action="executa?tarefa=NovaEmpresa" method="post">
 		Nome: <input type="text" name="nome" /> <input type="submit"
-			name="Enviar" />
+			value="Enviar" />
 	</form>
 
 	<form action="login" method="post">
 		Email: <input type="email" name="email" /> Senha: <input
 			type="password" name="senha" /> <input type="submit" value="enviar" />
 	</form>
-	<form action="logout" method="post">
-		<input type="submit" value="Deslogar" />
+	<form action="executa" method="post">
+		<input type="hidden" name="tarefa" value="Logout" /> <input
+			type="submit" value="Deslogar" />
 	</form>
 
 </body>
